@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Layouting</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 40px;
+      background-color: #f8f9fa;
+    }
+
+    h1 {
+      color: #2c3e50;
+    }
+
+    h2 {
+      color: #34495e;
+      margin-top: 40px;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 5px;
+    }
+
+    .example {
+      background: white;
+      border: 1px solid #ddd;
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 5px;
+    }
+
+    .flexbox-container {
+      background: #e9ecef;
+      height: 150px;
+      display: flex;
+      gap: 10px;
+    }
+
+    .flex-item {
+      background-color: #3498db;
+      color: white;
+      padding: 10px;
+      flex: 0 0 100px;
+      text-align: center;
+    }
+
+    .code-label {
+      font-family: monospace;
+      background: #f0f0f0;
+      display: inline-block;
+      padding: 2px 6px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Module 2: CSS Layouting</h1>
+
+  <h2>1. Flexbox - Horizontal Default</h2>
+  <p>Flex container aligns items in a row by default.</p>
+  <div class="example">
+    <div class="flexbox-container" style="justify-content: flex-start;">
+      <div class="flex-item">1</div>
+      <div class="flex-item">2</div>
+      <div class="flex-item">3</div>
+    </div>
+    <div class="code-label">justify-content: flex-start;</div>
+  </div>
+
+  <h2>2. Flexbox - Centered Horizontally</h2>
+  <p>This centers the items horizontally inside the flex container.</p>
+  <div class="example">
+    <div class="flexbox-container" style="justify-content: center;">
+      <div class="flex-item">A</div>
+      <div class="flex-item">B</div>
+    </div>
+    <div class="code-label">justify-content: center;</div>
+  </div>
+
+  <h2>3. Flexbox - Space Between</h2>
+  <p>Even space between items, but no space at the edges.</p>
+  <div class="example">
+    <div class="flexbox-container" style="justify-content: space-between;">
+      <div class="flex-item">X</div>
+      <div class="flex-item">Y</div>
+      <div class="flex-item">Z</div>
+    </div>
+    <div class="code-label">justify-content: space-between;</div>
+  </div>
+
+  <h2>4. Flexbox - Align Vertically to Center</h2>
+  <p>Align items vertically (cross axis) to the center.</p>
+  <div class="example" style="height: 200px;">
+    <div class="flexbox-container" style="align-items: center;">
+      <div class="flex-item">🧍</div>
+      <div class="flex-item">🙋</div>
+    </div>
+    <div class="code-label">align-items: center;</div>
+  </div>
+
+  <h2>5. Flex Direction: Column</h2>
+  <p>Change layout to vertical stacking using <code>flex-direction: column</code>.</p>
+  <div class="example">
+    <div class="flexbox-container" style="flex-direction: column; height: auto;">
+      <div class="flex-item">🔼 Top</div>
+      <div class="flex-item">⬇️ Bottom</div>
+    </div>
+    <div class="code-label">flex-direction: column;</div>
+  </div>
+
+  <h2>6. Flex Wrap</h2>
+  <p>Allow items to wrap to the next line if there's not enough space.</p>
+  <div class="example">
+    <div class="flexbox-container" style="flex-wrap: wrap;">
+      <div class="flex-item">1</div>
+      <div class="flex-item">2</div>
+      <div class="flex-item">3</div>
+      <div class="flex-item">4</div>
+      <div class="flex-item">5</div>
+      <div class="flex-item">6</div>
+    </div>
+    <div class="code-label">flex-wrap: wrap;</div>
+  </div>
+
+  <h2>Link</h2>
+  <div class="example">
+    <div style="display: flex; justify-content: space-between;">
+      <a href="beginner.html">Back to Intro</a>
+      <a href="advance.html">Next Modules</a>
+    </div>
+  </div>
+</body>
+
+</html>

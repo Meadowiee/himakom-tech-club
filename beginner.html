@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Basics</title>
+  <style>
+    :root {
+      --main-color: #3498db;
+      --accent-color: #e67e22;
+      --bg-light: #f9f9f9;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--bg-light);
+      padding: 40px;
+      color: #333;
+    }
+
+    h1 {
+      color: var(--main-color);
+    }
+
+    h2 {
+      color: var(--accent-color);
+      border-bottom: 2px solid var(--accent-color);
+      margin-top: 40px;
+    }
+
+    .example {
+      background: white;
+      padding: 20px;
+      border: 1px solid #ccc;
+      margin-top: 20px;
+      border-radius: 5px;
+    }
+
+    .color-text {
+      color: red;
+    }
+
+    .font-style {
+      font-size: 18px;
+      font-weight: bold;
+      font-style: italic;
+      text-decoration: underline;
+    }
+
+    .variable-box {
+      background-color: var(--main-color);
+      color: white;
+      padding: 10px;
+    }
+
+    a {
+      color: var(--main-color);
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Module 1: CSS Basics</h1>
+
+  <h2>Font Styling</h2>
+  <div class="example font-style">
+    This text is bold, italic, underlined, and 18px in size.
+  </div>
+
+  <h2>Text Color</h2>
+  <div class="example color-text">
+    This text is red using <code>color: red</code>
+  </div>
+
+  <h2>CSS Variables</h2>
+  <div class="example variable-box">
+    This box uses a custom variable for background-color: <code>--main-color</code>
+  </div>
+
+  <h2>Link</h2>
+  <div class="example">
+      <a href="intermediate.html">Next Modules <code>text-decoration: none</code></a>
+  </div>
+</body>
+</html>

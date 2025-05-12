@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Selector Syntax</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 40px;
+      background-color: #f5f6fa;
+    }
+
+    h1 {
+      color: #2c3e50;
+    }
+
+    h2 {
+      color: #34495e;
+      border-bottom: 2px solid #ccc;
+      margin-top: 40px;
+    }
+
+    .example {
+      background: white;
+      padding: 20px;
+      border: 1px solid #dfe6e9;
+      margin-top: 20px;
+      border-radius: 5px;
+    }
+
+    a {
+      color: blue;
+      text-decoration: none;
+    }
+
+    .this {
+      background-color: yellow;
+      padding: 5px;
+    }
+
+    #unique {
+      border: 2px solid red;
+      padding: 5px;
+    }
+
+    a, img, .box {
+      margin: 10px;
+      border:#d9e4f0 1px solid;
+      border-radius: 30px;
+    }
+
+    .card p {
+      font-size: 14px;
+    }
+
+    .card > p {
+      font-weight: bold;
+    }
+
+    a:hover {
+      color: red;
+    }
+
+    p::after {
+      content: " 🐢";
+    }
+
+    .card {
+      background-color: #e1e8f0;
+      padding: 10px;
+    }
+
+    .box {
+      background-color: #55efc4;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Introduction: CSS Selector Syntax</h1>
+
+  <h2>1. Element Selector: <code>a</code></h2>
+  <p>This targets all <code>&lt;a&gt;</code> tags on the page.</p>
+  <div class="example">
+    <a href="#">This is a link</a>
+  </div>
+
+  <h2>2. Class Selector: <code>.this</code></h2>
+  <p>This targets elements with class <code>this</code>.</p>
+  <div class="example">
+    <div class="this">This box has a yellow background.</div>
+  </div>
+
+  <h2>3. ID Selector: <code>#unique</code></h2>
+  <p>This targets the element with <code>id="unique"</code>.</p>
+  <div class="example">
+    <p id="unique">I am a unique paragraph!</p>
+  </div>
+
+  <h2>4. Group Selector: <code>a, img, .box</code></h2>
+  <p>This applies to all <code>&lt;a&gt;</code>, <code>&lt;img&gt;</code>, and elements with class <code>box</code>.</p>
+  <div class="example">
+    <a href="#">Link with margin</a><br>
+    <img src="images/notion.jpg" alt="image" /><br>
+    <div class="box">This box has margin!</div>
+  </div>
+
+  <h2>5. Descendant Selector: <code>.card p</code></h2>
+  <p>This targets all <code>&lt;p&gt;</code> tags inside elements with class <code>card</code>.</p>
+  <div class="example">
+    <div class="card">
+      <p>This paragraph will be smaller.</p>
+    </div>
+  </div>
+
+  <h2>6. Child Selector: <code>.card &gt; p</code></h2>
+  <p>This targets only direct <code>&lt;p&gt;</code> children inside the <code>.card</code> class.</p>
+  <div class="example">
+    <div class="card">
+      <p>This text will be bold</p>
+      <div>
+        <p>And what about this?</p>
+      </div>
+    </div>
+  </div>
+
+  <h2>7. Pseudo-class Selector: <code>a:hover</code></h2>
+  <p>This changes the color when hovering over <code>&lt;a&gt;</code> tags.</p>
+  <div class="example">
+    <a href="#">Hover over this link</a>
+  </div>
+
+  <h2>8. Pseudo-element Selector: <code>p::after</code></h2>
+  <p>This adds content after every <code>&lt;p&gt;</code> tag.</p>
+  <div class="example">
+    <p>This paragraph gets a turtle after it.</p>
+  </div>
+
+  <h2>Link</h2>
+  <div class="example">
+    <div style="display: flex; justify-content: space-between;">
+      <a href="beginner.html">Next Modules</a>
+    </div>
+  </div>
+</body>
+</html>

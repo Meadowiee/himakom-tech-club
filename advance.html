@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Advanced Features</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f2f2f2;
+      padding: 40px;
+    }
+
+    h1 {
+      color: #2d3436;
+    }
+
+    h2 {
+      color: #636e72;
+      border-bottom: 2px solid #ccc;
+      margin-top: 40px;
+    }
+
+    .example {
+      background: white;
+      padding: 20px;
+      border: 1px solid #dfe6e9;
+      margin-top: 20px;
+      border-radius: 5px;
+    }
+
+    .transition-box {
+      width: 100px;
+      height: 100px;
+      background: #74b9ff;
+      transition: background 0.5s, transform 0.3s;
+    }
+
+    .transition-box:hover {
+      background: #0984e3;
+      transform: scale(1.2);
+    }
+
+    .animated-box {
+      width: 100px;
+      height: 100px;
+      background: #00cec9;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%   { transform: translateY(0); }
+      50%  { transform: translateY(-30px); }
+      100% { transform: translateY(0); }
+    }
+
+    .media-box {
+      padding: 20px;
+      background: #ffeaa7;
+      color: #2d3436;
+    }
+
+    @media (max-width: 900px) {
+      .media-box {
+        background: #fab1a0;
+        color: white;
+      }
+    }
+
+    .transform-box {
+      width: 100px;
+      height: 100px;
+      background: #6c5ce7;
+      transform: rotate(10deg) scale(1.1);
+      color: white;
+      text-align: center;
+      padding-top: 40px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>Module 3: CSS Advanced Features</h1>
+
+  <h2>1. Transition</h2>
+  <p>Smooth change of properties on hover (background & scale).</p>
+  <div class="example">
+    <div class="transition-box"></div>
+  </div>
+
+  <h2>2. Animation</h2>
+  <p>Looping "bounce" effect using <code>@keyframes</code>.</p>
+  <div class="example">
+    <div class="animated-box"></div>
+  </div>
+
+  <h2>3. Media Query</h2>
+  <p>Changes the background color on smaller screens (max 600px).</p>
+  <div class="example media-box">
+    Resize the window to see it change!
+  </div>
+
+  <h2>4. Transform</h2>
+  <p>Rotate + scale combined.</p>
+  <div class="example">
+    <div class="transform-box">Hello</div>
+  </div>
+
+  <h2>Link</h2>
+  <div class="example">
+    <div style="display: flex; justify-content: space-between;">
+      <a href="intermediate.html">Back to Intermediate</a>
+      <a href="introduction.html">Start from Introduction</a>
+    </div>
+  </div>
+</body>
+</html>
